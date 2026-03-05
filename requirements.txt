@@ -1,0 +1,27 @@
+# Core dependencies
+pandas>=2.0.0
+numpy>=1.24.0
+
+# Database
+# SQLite is included in Python standard library
+
+# Dashboard
+streamlit>=1.28.0
+plotly>=5.17.0
+
+# API (optional)
+flask>=3.0.0
+flask-cors>=4.0.0
+
+# ML Predictions (optional)
+scikit-learn>=1.3.0
+
+# Data processing
+# All standard library modules used
+
+# API Client (for examples)
+requests>=2.31.0
+
+# Development (optional)
+pytest>=7.4.0
+black>=23.0.0
