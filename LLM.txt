@@ -1,0 +1,173 @@
+Let's go step by step according to the assignment PDF.
+
+First, I want to make sure the data processing and storage layer fully matches the requirements.
+
+Please review the current implementation and improve the following:
+
+1. Clearly define the SQLite database schema for telemetry analytics:
+   - sessions
+   - events
+   - users/employees
+   - token usage
+
+2. Add proper relationships and indexes to optimize analytics queries.
+
+3. Ensure the data ingestion pipeline:
+   - validates JSONL telemetry events
+   - handles missing or malformed fields
+   - logs errors instead of crashing
+
+4. Refactor the data processing layer to follow a clean architecture:
+   - ingestion
+   - validation
+   - transformation
+   - database insert
+
+5. Document the schema and ingestion pipeline inside README.md.
+
+Do not break the existing project structure, just improve it.
+
+
+
+Now let's implement the analytics layer according to the assignment requirements.
+
+Please extend the analytics module to generate meaningful insights from the telemetry data stored in the database.
+
+Add analytics functions that calculate the following:
+
+1. Token consumption trends by user role:
+total tokens used per role
+average tokens per session
+tokens per project type
+
+2. Peak usage times:
+ usage distribution by hour of day
+ usage distribution by day of week
+ identify peak activity windows
+
+3. Code generation behavior patterns:
+ most common event types
+ average events per session
+ most frequent tool or feature usage
+
+4. Session-level insights:
+ average session duration
+ sessions per user
+ most active users
+
+5. Query optimization:
+ ensure queries use the indexes created in the database schema
+return results in a format that can easily be used by the Streamlit dashboard
+
+6. Create a clean analytics interface:
+implement an AnalyticsService class
+separate query logic from visualization logic
+include docstrings for each analytics function
+
+Do not modify the dashboard yet. Focus only on implementing the analytics functions that the dashboard will later consume.
+
+
+Now let's implement the visualization layer using Streamlit.
+
+Update the existing dashboard so it uses the new AnalyticsService and presents the analytics insights in a clear interactive dashboard.
+
+Please implement the following improvements:
+
+1. Dashboard structure
+   Create multiple sections in the dashboard:
+Overview
+Token Usage Analytics
+Usage Patterns
+Session Insights
+User Activity
+
+2. Overview section
+   Show high-level metrics:
+total tokens used
+total sessions
+total events
+total users
+
+Display them as KPI cards at the top of the dashboard.
+
+3. Token Usage Analytics
+   Add visualizations for:
+token consumption by user role (bar chart)
+token consumption by project type
+average tokens per session by role
+
+4. Usage Patterns
+   Add charts for:
+usage distribution by hour of day
+usage distribution by day of week
+most common event types
+
+5. Session Insights
+   Visualize:
+average session duration
+events per session
+session activity distribution
+
+6. User Activity
+   Add:
+most active users table
+sessions per user visualization
+
+7. Interactivity
+   Add dashboard controls:
+date range filter
+top N selector for charts
+role filter (if available)
+
+8. Visualization tools
+   Use:
+Plotly or Altair for interactive charts
+Streamlit layout features (columns, expanders, tabs)
+
+9. Clean UI
+   Organize the dashboard using:
+Streamlit tabs or sections
+clear titles and descriptions
+readable charts
+
+Do not modify the analytics logic. Only consume the AnalyticsService methods for the dashboard visualizations.
+
+
+--------------------------------------------
+
+Please improve the README.md so that it looks like a professional project README.
+
+Add the following sections:
+
+- Project Overview
+- System Architecture
+- Data Processing Pipeline
+- Database Schema
+- Analytics Layer
+- Dashboard Overview
+- Setup Instructions
+- How to Run the Project
+- Insights Summary
+- LLM Usage
+
+Keep the explanations clear and concise.
+
+
+
+-------------------------
+
+
+Using the analytics results from the database, generate a short Insights Summary.
+
+The summary should explain:
+
+- which user roles generate the most token usage
+- peak usage hours and developer activity patterns
+- the most common telemetry events
+- session behavior trends
+
+Write the insights in a clear, concise way suitable for an analytics report.
+
+
+-------------------------------
+
